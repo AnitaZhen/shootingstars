@@ -1,0 +1,17 @@
+{
+  "name": "shootingstars",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnitaZhen/shootingstars.git"
+  },
+  "author": "Anita Zhen",
+  "license": "ISC"
+}
