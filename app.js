@@ -1,17 +1,23 @@
 var express = require('express');
+
+const path = require('path')// node.js native path module to join directories containing scripts and style
+
 var app = express();
 
-//set port
-var port = process.env.PORT || 3000
-
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/views"));
 
 //routes
-
-app.get("/", function(req, res){
-  res.render("index");
+app.set('view engine', 'ejs')// set ejs as templating engine for the express app
+app.get('/index', function(req, res){
+  res.render('index');
+})
+app.get('/', function(req, res){
+  res.render('index');
 })
 
-app.listen(port, function(){
-  console.log("app running")
+app.listen(process.env.PORT || 3000, () => {
+
+	console.log('Server Running')
 })
+
+module.exports.app = app;
