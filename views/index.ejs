@@ -1,6 +1,227 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h1>Welcome Shooting Stars!</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">//for the navigation bar
+    <link href="ejs/about.ejs" rel="stylesheet" type="text/ejs" />
+    <link href="ejs/login.ejs" rel="stylesheet" type="text/ejs" />
+    <link href="ejs/sign_up.ejs" rel="stylesheet" type="text/ejs" />
+    
+    <title>Shooting Stars!</title>
+</head>
+<body>
+
+<br>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header-right">
+        <a class="navbar-brand" href="#shooting_stars">Shooting Stars</a>
+      </div>
+      
+      <ul class = "nav nav-pills pull-right" role="tablist">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#parent">Parent</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#travel">Travel Destination</a></li>
+        <!-- <li><button class="btn btn-danger navbar-btn">Login</button></li>-->
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+        <li><button onclick="sign_up()">sign_up</button></li>
+        <script>
+          function sign_up(){
+            location.replace(shootingstars/views/pages/sign_up.ejs)
+          }
+        </script>
+      </ul>
+    </div>
+  </nav>
+  <br>
+
+  <h1>Welcome Student</h1>
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+.table{
+  text-align: center;
+}
+.columns {
+  float: left;
+  width: 22.2%;
+  padding: 25px;
+  text-align: center;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: auto;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+  <h2 style="text-align:center">Plans</h2>
+  
+ <div class="columns" id = "price" style="width:300px; margin:0 auto;">
+  <ul class="price">
+    <li class="header">School Year</li>
+    <li class="grey">$ 10000 / year</li>
+    <li>Tuition</li>
+    <li>Round Trip Plane Ticket</li>
+    <li>Transportation</li>
+    <li>Room + Utilities</li>
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
+</div>
+
+<div class="columns" id = "price" style="width:300px; margin:0 auto;">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Semester</li>
+    <li class="grey">$ 5000 / year</li>
+    <li>Tuition</li>
+    <li>Round Trip Plane Ticket</li>
+    <li>Transportation</li>
+    <li>Room + Utilities</li>
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
+
+<div class="columns" id= "price" style="width:300px; margin:0 auto;">
+  <ul class="price">
+    <li class="header">Summer</li>
+    <li class="grey">$ 2000 / year</li>
+    <li>Tuition</li>
+    <li>Round Trip Plane Ticket</li>
+    <li>Transportation</li>
+    <li>Room + Utilities</li>
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
+
+<div class="columns" id = "price" style="width:300px; margin:0 auto;">
+  <ul class="price">
+    <li class="header">Internship</li>
+    <li class="grey">$ 1000 / year</li>
+    <li>Transportation</li>
+    <li>Room + Utilities</li>
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+ </div>
+</div>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 style="text-align:center">Places we offer</h2>
+
+<style>
+  div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+ul.images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  width: 900px;
+}
+
+ul.images li {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+</style>
+<div class="scrollmenu">
+<ul class="images">
+    <!-- Inline styles added for demonstration purposes only. -->
+    <li style ="background-color: #dff"><img src="image1.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image2.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+    <li style ="background-color: #dff"><img src="image3.jpg" ></li>
+  </ul>
+  </div>
+
+<br>
+<h2 style="text-align:center">Experiences of different countries</h2>
+<!-- Footer -->
+    <div class= "footer">
+      <div class="container">
+        <div class="text-center">
+            <ul class ="nav nav-pills pull-right" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#parent">Parent</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#travel">Travel Destination</a></li>
+                <li><a href="#shootingstars/view/pages/about.ejs">About</a></li>
+             </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

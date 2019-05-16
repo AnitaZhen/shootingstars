@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    
+<h1 align="center">Sign Up!</h1>
+
+    <form name='registration' onsubmit="return checkform(this)" method="post" action='/db'>
+
+        <!--Name-->
+        <div class="container center_div">
+          <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="col-md-4 control-label">Full Name: <span class="error">*</span></label>
+                <input  type="text"  name="fullname" pattern="[A-Za-z0-9-_ .\s]+" maxlength="40"
+                        minlength="2" class="form-control" id="fullname" placeholder = "Enter your Full Name" required>
+            </div>
+          </div>
+        </div>
+
+        <!--Email-->
+        <div class="container center_div">
+          <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="col-md-4 control-label" >Email<span class="error">*</span></label>
+                <input type="email" class="form-control" name = "email" id="inputEmail4" maxlength="40" placeholder="Enter a valid email address" required>
+            </div>
+          </div>
+        </div>
+
+        <!--Age-->
+        <div class="container center_div">
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                  <label for="col-md-4 control-label" >Age<span class="error">*</span></label>
+                  <input type="text" class="form-control" name = "age" pattern="[0-9]{10}" id="age" maxlength="3" placeholder="Enter your age" required>
+              </div>
+            </div>
+          </div>
+
+          <!--School-->
+        <div class="container center_div">
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                  <label for="col-md-4 control-label">School: <span class="error">*</span></label>
+                  <input  type="text"  name="school" pattern="[A-Za-z0-9-_ .\s]+" maxlength="40"
+                          minlength="2" class="form-control" id="school" placeholder = "Enter your School" required>
+              </div>
+            </div>
+          </div>
+
+          <!--Plan-->
+          <div class="container center_div">
+            <div class="form-row">
+              <div class="form-group">
+                  <div class="col-md-2">
+                      <label for="Plan" name="Plan"> Plan<span class="error">*</span></label>
+                      <select class="form-control" id="exampleFormControlSelect1" name="income" required>
+                          <option value="">Select one...</option>
+                          <option value="Year">Year</option>
+                          <option value="Semester">Semester</option>
+                          <option value="Summer">Summer</option>
+                          <option value="Internship">Internship</option>
+                      </select>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Location-->
+          <div class="container center_div">
+              <div class="form-row">
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label for="Location" name="Location"> Location<span class="error">*</span></label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="income" required>
+                            <option value="">Select one...</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Texas">Texas</option>
+                            <option value="New York">New York</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Rome">Rome</option>
+                            <option value="Paris">Paris</option>
+                            <option value="London">London</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Others...">Others...</option>
+                        </select>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Destination-->
+          <div class="container center_div">
+              <div class="form-row">
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label for="Destination" name="Destination"> Destination<span class="error">*</span></label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="income" required>
+                            <option value="">Select one...</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Texas">Texas</option>
+                            <option value="New York">New York</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Rome">Rome</option>
+                            <option value="Paris">Paris</option>
+                            <option value="London">London</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Others...">Others...</option>
+                        </select>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+         <!--Password-->
+         <form ... onsubmit="return checkForm(this);">
+
+            <!-- <div class="form-group"> -->
+          <div class="container center_div">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="pwd"><br>Password<span class="error">*</label>
+                    <input title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" 
+                           type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                           name="pwd1" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+                             if(this.checkValidity()) form.pwd2.pattern = RegExp.escape(this.value);
+                           " placeholder="Enter password" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+<!-- Confirm Password -->
+<div class="container center_div">
+  <div class="form-row">
+    <div class="form-group">
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="inputConfirmPassword">Confirm Password<span class="error">*</label>
+                <!-- <input type="password" required name="pwd2" title="Password doesnt match" id="inputPassword5" placeholder="Confirm Password" class="form-control" aria-describedby="passwordHelpBlock" name="confirmPassword" data-match="#confirmPassword" data-minLength="5"
+                       data-match-error="some error 2" required> -->
+                <input title="Please enter the same Password as above" 
+                  type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    name="pwd2" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : '');" 
+                    placeholder="Confirm Password" class="form-control">
+                      <span class="help-block with-errors"></span>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+ <!--I agree to terms-->
+ <div class="col-md-6">
+    <div class="form-row">
+        <label class="col-md-4 control-label" style="text-align:left;">Terms and Conditions: <span class="error">*</label>
+        <div class="input-group">
+            <p><input type="checkbox" name="terms" value="check" id="terms" required> I have read and agree to the Terms and Conditions</p>
+        </div>
+        <details>
+            <summary>Terms and Conditions.</summary>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </details>
+    </div>
+  <br>
+<!--Captcha-->
+<div class="container center_div">
+    <div class="form-row">
+        <label class="col-md-4 control-label" style="text-align:left;">Captcha <span class="error">*</label>
+          <div class="g-recaptcha" data-sitekey="6LcswaIUAAAAAIhVgzaXINHYRkyG4Mgs98WOyaub" required>
+    </div>
+ </div>
+
+ <br>
+  <!-- Cancel Button -->
+  <div class="col-md-2">
+      <div class="form-row">
+          <label class="col-md-2 control-label"></label>
+          <button type='cancel' id="myButton" class="float-left cancel-button" >Cancel</button>
+      </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="col-md-2">
+      <div class="form-row">
+          <label class="col-md-2 control-label"></label>
+          <button type='submit' id="myButton" class="float-left submit-button" >Submit</button>
+      </div>
+  </div>
+  </form>
+</html>
